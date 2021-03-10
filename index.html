@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+
+    <!-- Bootstrap v5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="row content">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-4">
+                <div class="block1">
+                    <div class="converter">
+                        <div class="header">Converter</div>
+
+                        <div class="select">
+                            <label for="currencyFrom">From:</label>
+                            <select class="form-select" id="currencyFrom">
+
+                            </select>
+                        </div>
+                        <div class="select">
+                            <label for="currencyTo">To:</label>
+                            <select class="form-select" id="currencyTo">
+
+                            </select>
+                        </div>
+                        <div class="date">
+                            <label for="selectedDate">Date:</label>
+                            <input type="date" name="selectedDate" id="selectedDate" class="form-control selectedDate">
+                        </div>
+                        <div class="btnRes">
+                            <button type="button" class="btn btn-primary btnOk" id="btnOk">OK</button>
+                            <div class="currencyRes">
+                                <p id="curRes">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest">
+                        <div class="header">
+                            <span id="latestSpanCur" class="latestSpanCur"></span>
+                            Latest
+                            <span id="latestSpan" class="latestSpan"></span>
+                        </div>
+
+                        <div class="tableBox">
+
+                            <table class="table table-striped currencyTable">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Currency</th>
+                                        <th scope="col">Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tBody">
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-7 col-xl-8">
+                <div class="block2">
+                    <div class="header">Month Rates</div>
+
+                    <div class="selectBase">
+                        <label for="currencyBase">Base:
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <select class="form-select" id="currencyBase">
+
+                        </select>
+                    </div>
+
+                    <div class="selectBase">
+                        <label for="currencyFollow">Currency: &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <select class="form-select" id="currencyFollow">
+
+                        </select>
+                    </div>
+
+                    <div class="selectMonth">
+                        <label for="currencyFollow">Month: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="month" name="selectMonth" id="selectMonth" class="form-control">
+                    </div>
+
+
+                    <div class="chartBlock">
+                        <div id="chart_div" class="histogram"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Google Charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- Bootstrap v5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Paginathing -->
+    <script src="plugins/paginathing.js"></script>
+
+    <!-- My JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
