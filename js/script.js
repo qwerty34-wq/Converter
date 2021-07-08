@@ -12,7 +12,7 @@ var selectMonth = document.getElementById("selectMonth")
 
 function AJAXrequest() {
     let req = new XMLHttpRequest()
-    req.open("GET", "https://api.exchangeratesapi.io/latest", false)
+    req.open("GET", "https://api.exchangeratesapi.io/latest?access_key=9d88f664362c90bba4aff246e1c9bbaf", false)
     req.send()
     let data = JSON.parse(req.responseText)
     return data
@@ -104,7 +104,7 @@ function validateData() {
 function getDataSynchronously(cf, ct, date) {
     let req = new XMLHttpRequest()
 
-    req.open("GET", `https://api.exchangeratesapi.io/${date}?base=${cf}`, false)
+    req.open("GET", `https://api.exchangeratesapi.io/${date}?base=${cf}&access_key=9d88f664362c90bba4aff246e1c9bbaf`, false)
 
     req.send()
 
@@ -190,7 +190,7 @@ function updateTableRequest(cf) {
 
     let req = new XMLHttpRequest()
 
-    req.open("GET", `https://api.exchangeratesapi.io/latest?base=${cf}`)
+    req.open("GET", `https://api.exchangeratesapi.io/latest?base=${cf}&access_key=9d88f664362c90bba4aff246e1c9bbaf`)
 
     req.onreadystatechange = () => {
         if (req.readyState == 4) {
@@ -380,7 +380,7 @@ function MyHistogram(cb, cfw, month) {
 
     let req = new XMLHttpRequest()
     
-    req.open("GET", `https://api.exchangeratesapi.io/history?start_at=${month}-01&end_at=${y}-${m}-01&base=${cb}`)
+    req.open("GET", `https://api.exchangeratesapi.io/history?start_at=${month}-01&end_at=${y}-${m}-01&base=${cb}&access_key=9d88f664362c90bba4aff246e1c9bbaf`)
 
     req.onreadystatechange = () => {
         if (req.readyState == 4) {
